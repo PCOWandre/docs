@@ -6,17 +6,6 @@ description: Updating Manual Installation
 
 Usually you can update Rocket.Chat server pretty easily.
 
-Stop Rocket.Chat service:
-
-```text
-sudo systemctl stop rocketchat
-```
-
-Remove the installation folder, usually in /opt:
-
-```text
-sudo rm -rf /opt/Rocket.Chat
-```
 
 Download Rocket.Chat latest version:
 
@@ -32,6 +21,18 @@ Install it and set right permissions to Rocket.Chat folder:
 
 ```text
 cd /tmp/bundle/programs/server && npm install
+```
+
+Stop Rocket.Chat service:
+
+```text
+sudo systemctl stop rocketchat
+```
+
+Back up and move the installation folder, usually in /opt:
+
+```text
+sudo mv /opt/Rocket.Chat /opt/OLD.Rocket.Chat
 ```
 
 ```text
